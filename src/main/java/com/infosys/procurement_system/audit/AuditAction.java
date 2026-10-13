@@ -1,0 +1,6 @@
+package com.infosys.procurement_system.audit;
+
+public enum AuditAction {
+    CREATED, UPDATED, STATUS_CHANGED, SUBMITTED, APPROVED, REJECTED, RETURNED,
+    CANCELLED, ISSUED, CONFIRMED, RECEIVED, CLOSED, LOGIN, CHATBOT_UNANSWERED
+}

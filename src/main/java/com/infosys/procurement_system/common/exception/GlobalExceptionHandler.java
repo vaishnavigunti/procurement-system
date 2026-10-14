@@ -37,6 +37,11 @@ public class GlobalExceptionHandler {
         return build(HttpStatus.CONFLICT, ex.getMessage(), req, List.of());
     }
 
+    @ExceptionHandler(BadRequestException.class)
+    public ResponseEntity<ApiError> badInput(BadRequestException ex, HttpServletRequest req) {
+        return build(HttpStatus.BAD_REQUEST, ex.getMessage(), req, List.of());
+    }
+
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<ApiError> integrity(DataIntegrityViolationException ex, HttpServletRequest req) {
         log.warn("Data integrity violation: {}", ex.getMostSpecificCause().getMessage());

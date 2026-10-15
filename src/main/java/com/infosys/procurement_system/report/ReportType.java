@@ -1,0 +1,6 @@
+package com.infosys.procurement_system.report;
+
+public enum ReportType {
+    SPEND_BY_DEPARTMENT, SPEND_BY_CATEGORY, SPEND_BY_SUPPLIER, MONTHLY_SPEND,
+    APPROVER_PERFORMANCE, REQUISITIONS, PURCHASE_ORDERS
+}
